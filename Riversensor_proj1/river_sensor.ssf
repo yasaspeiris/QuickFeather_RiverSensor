@@ -1,0 +1,66 @@
+{
+    "name": "RiverSensor Custom",
+    "uuid": "f614edcc-58fe-4534-95b7-1355447308e5",
+    "collection_methods": [
+        {
+            "name": "live",
+            "display_name": "Live Stream Capture",
+            "storage_path": null,
+            "is_default": true
+        },
+        {
+            "name": "sd_card",
+            "display_name": "SD Card",
+            "storage_path": null,
+            "is_default": false
+        }
+    ],
+    "device_connections": [
+        {
+            "display_name": "Serial Port",
+            "value": 1,
+            "is_default": true,
+            "serial_port_configuration": {
+                "com_port": null,
+                "baud": 460800,
+                "stop_bits": 1,
+                "parity": 0,
+                "handshake": 0,
+                "max_live_sample_rate": 3301
+            }
+        },
+
+    ],
+    "capture_sources": [
+        {
+            "max_throughput": 0,
+            "name": "RiverSensor_All",
+            "part": "MC3635andADS1015",
+            "sample_rates": [
+                333,
+                250,
+                200,
+                100,
+                50
+            ],
+            "is_default": true,
+            "sensors": [
+                {
+                    "column_count": 4,
+                    "is_default": true,
+                    "column_suffixes": [
+                        "X",
+                        "Y",
+                        "Z",
+                        "ADC3",
+                    ],
+                    "type": "RiverSensor",
+                    "parameters": [],
+                    "sensor_id": 1397969747,
+                    "can_live_stream": true
+                }
+            ]
+        },
+    ],
+    "is_little_endian": true
+}
